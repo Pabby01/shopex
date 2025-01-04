@@ -4,6 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShopEx - Home to all accessories</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <h1>ShopEx</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#cart">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Welcome to ShopEasy</h2>
+        <p>Your one-stop shop for amazing products!</p>
+      </section>
+
+      <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+          <div class="product">
+            <h3>Product Name</h3>
+            <p>$10.00</p>
+            <button onclick="addToCart('Product Name', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0.00</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>
