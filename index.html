@@ -3,47 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShopEx - Home to all accessories</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+            colors: {
+              primary: "#003d28",
+            },
+          },
+        },
+      };
+    </script>
+    <title>ShopEx - Home to all accessories</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
+      <!-- BANNER -->
+      <div class="py-2 text-xs bg-primary text-white">
+        <div class="container flex items-center justify-between font-medium px-0">
+          <div class="flex items-center cursor-pointer gap-2">
+            <img src="/public/icons/phone.svg" alt="Shopping Cart" width="18" height="18" />
+            <p>+2348133961439</p>
+          </div>
+          <p class="flex items-center gap-4">
+            <span>Get 50% Off on Selected Items</span> <span>|</span> <span>Shop Now</span>
+          </p>
+          <div class="nav-list2">
+            <div>
+              <span id="cart-count">Eng</span>
+              <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+            </div>
+            <div>
+              <span id="cart-count">Lan</span>
+              <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <nav>
-        <h1>ShopEx</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#cart">Cart</a></li>
-        </ul>
+        <div class="container" id="nav-container">
+          <a href="/" class="flex items-center gap-2" id="logo">
+            <img src="/public/images/logo.png" alt="ShopEx Logo" width="20" height="20" />
+            <span class="font-bold text-lg">ShopEx</span>
+          </a>
+          <ul class="nav-list text-sm">
+            <li><a href="#home">Categories</a></li>
+            <li><a href="#products">What's new</a></li>
+            <li><a href="#cart">Deals</a></li>
+            <li><a href="#cart">About</a></li>
+          </ul>
+          <div class="nav-list2 text-sm">
+            <div>
+              <img src="/public/icons/user.svg" alt="Shopping Cart" width="18" height="18" />
+              <span id="cart-count">Account</span>
+            </div>
+            <div>
+              <img src="/public/icons/cart.svg" alt="Shopping Cart" width="18" height="18" />
+              <span id="cart-count">Cart</span>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
+    <!-- MAIN -->
     <main>
       <section id="home">
-        <h2>Welcome to ShopEasy</h2>
-        <p>Your one-stop shop for amazing products!</p>
-      </section>
+        <div class="container" id="hero-container">
+          <div class="flex flex-col justify-center gap-4">
+            <div class="space-y-10">
+              <div class="max-w-2xl space-y-3 md:text-start text-center">
+                <h2 class="font-extrabold text-7xl">Shop Smarter, Live Better.</h2>
+                <p class="max-w-md md:mx-0 mx-auto text-[14px] font-medium">
+                  Discover handpicked products at unbeatable prices. Your next favorite find is just a click away!
+                </p>
+              </div>
+              <div class="space-y-2 max-w-md">
+                <div
+                  class="border border-gray-200 rounded-full p-1 flex items-center focus-within:border-primary duration-300"
+                >
+                  <input type="text" class="px-4 flex-grow text-sm" placeholder="Search for products" />
+                  <button class="text-white bg-primary px-4 py-2 rounded-full flex items-center text-sm gap-1">
+                    <!-- <span>Go</span> -->
+                    <img src="/public/icons/plane.svg" alt="Search" width="20" height="20" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-list">
-          <div class="product">
-            <h3>Product Name</h3>
-            <p>$10.00</p>
-            <button onclick="addToCart('Product Name', 10)">Add to Cart</button>
+          <div class="flex items-center justify-center">
+            <img src="/public/images/home/hero-image.svg" alt="ShopEx Hero" width="600" height="600" />
           </div>
         </div>
       </section>
-
-      <section id="cart">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p id="total-price">Total: $0.00</p>
-      </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+      <div class="container">
+        <p class="text-center font-medium text-sm">&copy; 2025 ShopEx. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="scripts.js"></script>
