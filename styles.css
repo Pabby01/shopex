@@ -6,6 +6,7 @@
 
 body {
   font-family: "Montserrat", serif;
+  overflow-x: hidden;
 }
 
 footer {
@@ -17,6 +18,11 @@ footer {
 input,
 a {
   outline: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /** HOME PAGE */
