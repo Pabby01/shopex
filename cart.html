@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+            padding: "1rem",
+          },
+          colors: {
+            primary: "#003d28",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <!-- BANNER -->
+    <div class="py-2 text-xs bg-primary text-white">
+      <div class="container flex items-center justify-between font-medium px-0">
+        <div class="flex items-center cursor-pointer gap-2">
+          <img src="/public/icons/phone.svg" alt="Shopping Cart" width="18" height="18" />
+          <p>+2348133961439</p>
+        </div>
+        <p class="flex items-center gap-4">
+          <span>Get 50% Off on Selected Items</span> <span>|</span> <span>Shop Now</span>
+        </p>
+        <div class="nav-list2">
+          <div>
+            <span id="cart-count">Eng</span>
+            <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+          </div>
+          <div>
+            <span id="cart-count">Lan</span>
+            <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <nav>
+      <div class="container" id="nav-container">
+        <a href="/" class="flex items-center gap-2" id="logo">
+          <img src="/public/images/logo.png" alt="ShopEx Logo" width="20" height="20" />
+          <span class="font-bold text-lg">ShopEx</span>
+        </a>
+        <ul class="nav-list text-sm">
+          <li><a href="#home">Categories</a></li>
+          <li><a href="#products">What's new</a></li>
+          <li><a href="#cart">Deals</a></li>
+          <li><a href="#cart">About</a></li>
+        </ul>
+        <div class="nav-list2 text-sm">
+          <div>
+            <img src="/public/icons/user.svg" alt="Shopping Cart" width="18" height="18" />
+            <span id="cart-count">Account</span>
+          </div>
+          <a href="./cart">
+            <img src="/public/icons/cart.svg" alt="Shopping Cart" width="18" height="18" />
+            <span id="cart-count">Cart</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-10">
+    <h2 class="font-bold text-4xl">Shopping Cart.</h2>
+
+    <div class="flex items-start gap-8 mt-8">
+      <ul id="cart_items" class="grid w-2/3">
+        <li id="cart_item" class="flex items-stretch gap-4 border-t border-primary p-4">
+          <img id="item_image" src="./public/images/books.jpeg" class="w-36 aspect-square" alt="">
+          <div class="flex flex-col justify-between py-2">
+            <div>
+              <h3 id="item_name" class="text-3xl font-semibold">Product Name</h3>
+              <p id="item_price" class="text-lg text-gray-500 font-medium">$999.99</p>
+            </div>
+
+            <div class="flex gap-12 ">
+              <div class="flex items-center gap-2">
+                <button class="">
+                  <img src="./public/icons/plus.svg" id="plus_btn" class="w-4 h-4" alt="">
+                </button>
+                <h5 class="font-semibold text-3xl" id="item_quantity">0</h5>
+                <button class="">
+                  <img src="./public/icons/minus.svg" id="minus-btn" class="w-4 h-4" alt="">
+                </button>
+              </div>
+              <button id="del_btn" class="flex items-center gap-2 bg-red-600 text-white py-2 px-4 rounded-md">
+                <img src="/public/icons/delete.svg" class="w-5 h-5" alt="">
+                Remove
+              </button>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
+      <div class="bg-gray-200 p-6 w-1/3 grid gap-4 rounded-lg">
+        <h3 class="text-3xl font-semibold">Cart Summary</h3>
+
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">Subtotal</h2>
+          <p id="subtotal_value">$999999.99</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">Shipping</h2>
+          <p id="shipping_value">$999999.99</p>
+        </div>
+        <div class="flex items-center justify-between border-y border-primary py-2">
+          <h2 class="text-xl font-semibold">Total</h2>
+          <p id="total_value">$999999.99</p>
+        </div>
+        <button id="checkout_btn" class="bg-primary w-full py-3 px-5 text-white rounded-md">Checkout</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
