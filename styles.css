@@ -84,4 +84,9 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
+/* #top-deals-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+} */
+
 /** HOME PAGE END */
