@@ -55,7 +55,7 @@ a {
   gap: 1rem;
 }
 
-.nav-list2 div {
+.nav-list2 div, a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -90,3 +90,11 @@ a {
 } */
 
 /** HOME PAGE END */
+
+
+
+
+
+/* CART PAGE START */
+
+/* CART PAGE END */
