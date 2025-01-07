@@ -19,7 +19,7 @@ const categories = [
 const formattedDeps = categories
   .map(
     (category) =>
-      `<li><a href="/products" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${category}</a></li>`
+      `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${category}</a></li>`
   )
   .join("\n");
 
@@ -46,9 +46,7 @@ const formattedAbout = [
 ]
   .map(
     (item) =>
-      `<li><a href="/${generateSlug(
-        item
-      )}" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
+      `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
   )
   .join("\n");
 document.getElementById("about-list").innerHTML = formattedAbout;
@@ -56,9 +54,7 @@ document.getElementById("about-list").innerHTML = formattedAbout;
 const formattedService = ["Gift Card", "Mobile App", "Shipping & Delivery", "Order Pickup", "Account Signup"]
   .map(
     (item) =>
-      `<li><a href="/${generateSlug(
-        item
-      )}" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
+      `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
   )
   .join("\n");
 document.getElementById("services-list").innerHTML = formattedService;
@@ -66,9 +62,7 @@ document.getElementById("services-list").innerHTML = formattedService;
 const formattedHelp = ["Shopcart Help", "Returns", "track orders", "contact us", "feedback", "Security & Fraud"]
   .map(
     (item) =>
-      `<li><a href="/${generateSlug(
-        item
-      )}" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
+      `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
   )
   .join("\n");
 document.getElementById("help-list").innerHTML = formattedHelp;
