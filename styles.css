@@ -85,6 +85,21 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 768px) {
+  #hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-list2 {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
 /* #top-deals-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

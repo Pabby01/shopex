@@ -27,13 +27,13 @@
     <!-- HEADER -->
     <header>
       <!-- BANNER -->
-      <div class="py-2 text-xs bg-primary text-white">
+      <div class="py-2 md:text-xs text-[9px] bg-primary text-white">
         <div class="container flex items-center justify-between font-medium px-0">
-          <div class="flex items-center cursor-pointer gap-2">
+          <div class="flex items-center cursor-pointer sm:gap-2">
             <img src="/public/icons/phone.svg" alt="Shopping Cart" width="18" height="18" />
             <p>+2348133961439</p>
           </div>
-          <p class="flex items-center gap-4">
+          <p class="flex items-center md:gap-4 gap-1">
             <span>Get 50% Off on Selected Items</span> <span>|</span> <span>Shop Now</span>
           </p>
           <div class="nav-list2">
@@ -41,20 +41,28 @@
               <span id="cart-count">Eng</span>
               <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
             </div>
-            <div>
+            <div class="!hidden sm:!block">
               <span id="cart-count">Lan</span>
-              <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+              <img
+                src="/public/icons/chevron-down.svg"
+                alt="Shopping Cart"
+                width="20"
+                height="20"
+                class="md:size-[20px] size-[15px]"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <nav>
+      <nav class="px-2 md:px-0">
         <div class="container" id="nav-container">
-          <a href="/" class="flex items-center gap-2" id="logo">
-            <img src="/public/images/logo.png" alt="ShopEx Logo" width="20" height="20" />
-            <span class="font-bold text-lg">ShopEx</span>
-          </a>
+          <div>
+            <a href="/" class="flex items-center gap-2" id="logo">
+              <img src="/public/images/logo.png" alt="ShopEx Logo" width="20" height="20" />
+              <span class="font-bold text-lg">ShopEx</span>
+            </a>
+          </div>
           <ul class="nav-list text-sm">
             <li><a href="#home">Categories</a></li>
             <li><a href="#products">What's new</a></li>
@@ -81,8 +89,8 @@
         <div class="container" id="hero-container">
           <div class="flex flex-col justify-center gap-4">
             <div class="space-y-10">
-              <div class="max-w-2xl space-y-3 md:text-start text-center">
-                <h2 class="font-extrabold text-7xl">Shop Smarter, Live Better.</h2>
+              <div class="max-w-2xl space-y-3">
+                <h2 class="font-extrabold md:text-7xl text-6xl">Shop Smarter, Live Better.</h2>
                 <p class="max-w-md md:mx-0 mx-auto text-[14px] font-medium">
                   Discover handpicked products at unbeatable prices. Your next favorite find is just a click away!
                 </p>
@@ -101,7 +109,7 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-center">
+          <div class="sm:flex hidden items-center justify-center">
             <img src="/public/images/home/hero-image.svg" alt="ShopEx Hero" width="600" height="600" />
           </div>
         </div>
@@ -110,27 +118,33 @@
       <section>
         <div class="container py-16 space-y-6">
           <div class="flex items-center justify-between gap-1">
-            <h3 class="font-extrabold text-2xl capitalize">Shop our top categories</h3>
-            <span class="text-primary text-sm font-medium cursor-pointer">See all</span>
+            <h3 class="font-extrabold md:text-2xl text-xl capitalize">Shop our top categories</h3>
+            <span class="text-primary text-sm font-medium cursor-pointer flex-shrink-0 border-b">See all</span>
           </div>
 
           <div class="flex items-center">
             <div
-              class="border size-8 cursor-pointer flex items-center select-none justify-center flex-shrink-0 rounded-full"
+              class="border md:size-8 size-7 cursor-pointer sm:flex hidden items-center select-none justify-center flex-shrink-0 rounded-full"
               id="category-slide-left"
             >
-              <img src="/public/icons/chevron-left.svg" alt="Left" width="20" height="20" class="flex-shrink-0" />
+              <img
+                src="/public/icons/chevron-left.svg"
+                alt="Left"
+                width="20"
+                height="20"
+                class="flex-shrink-0 md:size-[20px] size-[14px]"
+              />
             </div>
 
             <div class="relative">
-              <div class="absolute top-0 left-0 h-full w-[40px] bg-gradient-to-r from-white z-50"></div>
+              <div class="absolute top-0 left-0 h-full md:w-[40px] w-[5px] bg-gradient-to-r from-white z-50"></div>
 
               <div
-                class="flex whitespace-nowrap items-center gap-12 overflow-x-auto scroll-smooth scrollbar-none max-w-[calc(100vw-200px)] 2xl:max-w-[calc(100vw-400px)] category-slide px-5"
+                class="flex whitespace-nowrap items-center md:gap-12 gap-6 overflow-x-auto scroll-smooth scrollbar-none md:max-w-[calc(100vw-200px)] max-w-[calc(100vw-40px)] 2xl:max-w-[calc(100vw-400px)] category-slide md:px-5"
               >
                 <!-- electronics -->
                 <div>
-                  <a href="/categories/electronics" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -152,7 +166,7 @@
                 </div>
                 <!-- fashion -->
                 <div>
-                  <a href="/categories/fashion" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -174,7 +188,7 @@
                 </div>
                 <!-- beauty -->
                 <div>
-                  <a href="/categories/beauty" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -196,7 +210,7 @@
                 </div>
                 <!-- sports -->
                 <div>
-                  <a href="/categories/sports" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -218,7 +232,7 @@
                 </div>
                 <!-- home-appliances -->
                 <div>
-                  <a href="/categories/home-appliances" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -240,7 +254,7 @@
                 </div>
                 <!-- toys -->
                 <div>
-                  <a href="/categories/toys" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -262,7 +276,7 @@
                 </div>
                 <!-- cars -->
                 <div>
-                  <a href="/categories/cars" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -284,7 +298,7 @@
                 </div>
                 <!-- books -->
                 <div>
-                  <a href="/categories/books" class="space-y-2 text-center space-y-1">
+                  <a href="/products.html" class="space-y-2 text-center space-y-1">
                     <div
                       class="min-w-52 min-h-60 bg-primary rounded-md p-2 relative duration-200 hover:border-primary overflow-hidden mx-auto group"
                     >
@@ -306,13 +320,19 @@
                 </div>
               </div>
 
-              <div class="absolute top-0 right-0 h-full w-[40px] bg-gradient-to-l from-white z-50"></div>
+              <div class="absolute top-0 right-0 h-full md:w-[40px] w-[5px] bg-gradient-to-l from-white z-50"></div>
             </div>
             <div
-              class="border size-8 cursor-pointer flex items-center select-none justify-center flex-shrink-0 rounded-full"
+              class="border md:size-8 size-7 cursor-pointer sm:flex hidden items-center select-none justify-center flex-shrink-0 rounded-full"
               id="category-slide-right"
             >
-              <img src="/public/icons/chevron-right.svg" alt="Left" width="20" height="20" class="flex-shrink-0" />
+              <img
+                src="/public/icons/chevron-right.svg"
+                alt="Left"
+                width="20"
+                height="20"
+                class="flex-shrink-0 md:size-[20px] size-[14px]"
+              />
             </div>
           </div>
         </div>
@@ -322,18 +342,20 @@
         <div class="container py-16 space-y-4">
           <h3 class="text-2xl font-bold">Top Deals</h3>
 
-          <div id="top-deals-container" class="grid md:grid-cols-3 grid-cols-2 gap-8">
+          <div id="top-deals-container" class="grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-5">
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/homepod.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">HomePod mini</p>
+                  <p class="md:text-lg font-bold">HomePod mini</p>
 
-                  <span class="font-medium">$260.23</span>
+                  <span class="font-medium md:text-base text-sm">$260.23</span>
                 </div>
                 <p class="text-gray-500 text-xs">Table with air humidifier, stained veneer/black.</p>
                 <div class="flex items-center gap-2">
@@ -350,7 +372,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -359,15 +381,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/instaxmini.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">InstaX Mini 9</p>
+                  <p class="md:text-lg font-bold">InstaX Mini 9</p>
 
-                  <span class="font-medium">$99.00</span>
+                  <span class="font-medium md:text-base text-sm">$99.00</span>
                 </div>
                 <p class="text-gray-500 text-xs">Selfie mode, selfie mirror and more modes.</p>
                 <div class="flex items-center gap-2">
@@ -384,7 +408,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -393,15 +417,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/duffel.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Base Duffel Camp M</p>
+                  <p class="md:text-lg font-bold">Base Duffel Camp M</p>
 
-                  <span class="font-medium">$153.23</span>
+                  <span class="font-medium md:text-base text-sm">$153.23</span>
                 </div>
                 <p class="text-gray-500 text-xs">Camp storage bag used for a wide variety of camping activities.</p>
                 <div class="flex items-center gap-2">
@@ -418,7 +444,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -427,15 +453,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/tot-e-medium.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Tot e Medium</p>
+                  <p class="md:text-lg font-bold">Tot e Medium</p>
 
-                  <span class="font-medium">$546.54</span>
+                  <span class="font-medium md:text-base text-sm">$546.54</span>
                 </div>
                 <p class="text-gray-500 text-xs">
                   The Tot e Medium designer bad is a top-notch, un-scratchable leather bag.
@@ -454,7 +482,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -463,15 +491,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/headset.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Gaming Headset</p>
+                  <p class="md:text-lg font-bold">Gaming Headset</p>
 
-                  <span class="font-medium">$286.99</span>
+                  <span class="font-medium md:text-base text-sm">$286.99</span>
                 </div>
                 <p class="text-gray-500 text-xs">The only gaming headset you'll ever need for gaming.</p>
                 <div class="flex items-center gap-2">
@@ -488,7 +518,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -497,15 +527,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/watch.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Rolex Watch</p>
+                  <p class="md:text-lg font-bold">Rolex Watch</p>
 
-                  <span class="font-medium">$700k</span>
+                  <span class="font-medium md:text-base text-sm">$700k</span>
                 </div>
                 <p class="text-gray-500 text-xs">
                   Rolex has always been a sign of luxury, this model is gently crafted for the rich, not the poor.
@@ -524,7 +556,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -570,18 +602,20 @@
         <div class="container py-16 space-y-4">
           <h3 class="text-2xl font-bold">Weekly Popular Products</h3>
 
-          <div id="top-deals-container" class="grid md:grid-cols-3 grid-cols-2 gap-8">
+          <div id="top-deals-container" class="grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-5">
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/instaxmini.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">InstaX Mini 9</p>
+                  <p class="md:text-lg font-bold">InstaX Mini 9</p>
 
-                  <span class="font-medium">$99.00</span>
+                  <span class="font-medium md:text-base text-sm">$99.00</span>
                 </div>
                 <p class="text-gray-500 text-xs">Selfie mode, selfie mirror and more modes.</p>
                 <div class="flex items-center gap-2">
@@ -598,7 +632,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -607,15 +641,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/duffel.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Base Duffel Camp M</p>
+                  <p class="md:text-lg font-bold">Base Duffel Camp M</p>
 
-                  <span class="font-medium">$153.23</span>
+                  <span class="font-medium md:text-base text-sm">$153.23</span>
                 </div>
                 <p class="text-gray-500 text-xs">Camp storage bag used for a wide variety of camping activities.</p>
                 <div class="flex items-center gap-2">
@@ -632,7 +668,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -641,15 +677,17 @@
             </div>
             <!--  -->
             <div>
-              <div class="min-h-[18rem] bg-gray-100 rounded-md flex items-center justify-center group relative">
+              <div
+                class="md:min-h-[18rem] min-h-[15rem] bg-gray-100 rounded-md flex items-center justify-center group relative"
+              >
                 <img src="/public/images/watch.png" alt="" class="duration-300 group-hover:scale-110" />
               </div>
 
               <div class="space-y-2 py-3">
                 <div class="flex items-center justify-between">
-                  <p class="text-lg font-bold">Rolex Watch</p>
+                  <p class="md:text-lg font-bold">Rolex Watch</p>
 
-                  <span class="font-medium">$700k</span>
+                  <span class="font-medium md:text-base text-sm">$700k</span>
                 </div>
                 <p class="text-gray-500 text-xs">
                   Rolex has always been a sign of luxury, this model is gently crafted for the rich, not the poor.
@@ -668,7 +706,7 @@
 
                 <div class="pt-2">
                   <button
-                    class="px-5 text-sm py-2 rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
+                    class="md:px-5 px-4 md:text-sm py-2 text-xs rounded-full duration-300 hover:bg-primary hover:text-white border border-gray-300 hover:border-primary"
                   >
                     Add to Cart
                   </button>
@@ -701,7 +739,7 @@
 
     <!-- FOOTER -->
     <footer class="py-16">
-      <div class="container flex justify-between gap-8">
+      <div class="container flex md:flex-row flex-col justify-between gap-8">
         <div class="space-y-7">
           <div>
             <a href="/" class="flex items-center gap-2" id="logo">
@@ -716,8 +754,8 @@
           </p>
 
           <div class="space-y-3">
-            <p class="text-lg font-semibold">Accepted Payments</p>
-            <div class="flex items-center gap-2 flex-wrap">
+            <p class="md:text-lg font-semibold">Accepted Payments</p>
+            <div class="flex items-center gap-2 flex-wrap max-w-lg">
               <div class="border rounded-md flex items-center justify-center px-4 min-h-10">
                 <img src="/public/images/payments/stripe.png" alt="" />
               </div>
@@ -746,7 +784,7 @@
           </div>
         </div>
 
-        <div class="flex flex-grow justify-between gap-4">
+        <div class="sm:flex flex-grow grid grid-cols-2 justify-between gap-4">
           <div class="space-y-4">
             <p class="font-semibold text-lg">Department</p>
             <ul class="text-sm space-y-2" id="dept-list"></ul>
@@ -764,6 +802,8 @@
             <ul class="text-sm space-y-2" id="help-list"></ul>
           </div>
         </div>
+
+        <p class="text-center font-medium md:text-sm text-xs">&copy; 2025 ShopEx. All rights reserved.</p>
       </div>
     </footer>
 
