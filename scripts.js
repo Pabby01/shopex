@@ -46,13 +46,7 @@ const formattedAbout = [
 document.getElementById("about-list").innerHTML = formattedAbout;
 
 // Services List
-const formattedService = [
-  "Gift Card",
-  "Mobile App",
-  "Shipping & Delivery",
-  "Order Pickup",
-  "Account Signup",
-]
+const formattedService = ["Gift Card", "Mobile App", "Shipping & Delivery", "Order Pickup", "Account Signup"]
   .map(
     (item) =>
       `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
@@ -61,14 +55,7 @@ const formattedService = [
 document.getElementById("services-list").innerHTML = formattedService;
 
 // Help List
-const formattedHelp = [
-  "Shopcart Help",
-  "Returns",
-  "Track Orders",
-  "Contact Us",
-  "Feedback",
-  "Security & Fraud",
-]
+const formattedHelp = ["Shopcart Help", "Returns", "Track Orders", "Contact Us", "Feedback", "Security & Fraud"]
   .map(
     (item) =>
       `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
@@ -81,7 +68,7 @@ const userSection = document.querySelector(".nav-list3"); // Reference to the us
 
 function updateUserSection() {
   const isLoggedIn = localStorage.getItem("login") === "true";
-  const regUsername = localStorage.getItem("userName") || "Matthew"; // Default name if not set
+  const regUsername = localStorage.getItem("username") || "Matthew"; // Default name if not set
 
   if (isLoggedIn) {
     // Show user avatar and name
@@ -104,7 +91,7 @@ function updateUserSection() {
 
 // Redirect to login page
 function redirectToLogin() {
-  window.location.href = "Login.html";
+  window.location.href = "login.html";
 }
 
 // Initialize user section on page load
