@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shopex.com</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #307b29;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2d8542;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Main Content Styles */
+        .about-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            color: #2b7952;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .about-content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: rgb(88, 44, 44);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        About Shopex - Your Trusted Online Shopping Destination
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="about-content">
+        <h2>Welcome to Shopex.com</h2>
+        <p>
+            At Shopex.com, we are dedicated to providing you with the best online shopping experience. 
+            Our mission is to offer high-quality products at affordable prices, delivered right to your doorstep.
+        </p>
+        <p>
+            Founded in 2025, Shopex.com has quickly become a trusted name in the e-commerce industry. 
+            We pride ourselves on our customer-first approach, ensuring that every purchase you make is seamless and enjoyable.
+        </p>
+
+        <h2>Why Choose Shopex.com?</h2>
+        <ul>
+            <li>Wide range of products across various categories.</li>
+            <li>Secure and hassle-free payment options.</li>
+            <li>Fast and reliable delivery services.</li>
+            <li>24/7 customer support to assist you with any queries.</li>
+        </ul>
+
+        <h2>Our Vision</h2>
+        <p>
+            Our vision is to revolutionize the way people shop online by offering a platform that is user-friendly, 
+            reliable, and packed with the latest products. We aim to be the go-to destination for all your shopping needs.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2025 Shopex.com | All Rights Reserved
+    </footer>
+</body>
+</html>
