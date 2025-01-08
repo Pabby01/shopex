@@ -1,4 +1,4 @@
-let results = [
+let results = JSON.parse(localStorage.getItem('categories')) || [
   {
     id: 1,
     name: "Toyiba",
@@ -39,6 +39,10 @@ let results = [
     description: "This is a duffel bag that is very useful for carrying items",
   },
 ];
+
+function saveCategories() {
+  localStorage.setItem('categories', JSON.stringify(categoriesList));
+}
 
 function renderResults() {
   const resultsContainer = document.getElementById("results");

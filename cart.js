@@ -1,4 +1,4 @@
-let cart = [
+let cart = JSON.parse(localStorage.getItem('cart')) || [
   {
     id: 1,
     name: 'This is a toy',
@@ -14,6 +14,10 @@ let cart = [
     quantity: 1
   }
 ];
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
 
 
 function renderCartItems() {
@@ -104,22 +108,17 @@ function addRemoveButtonListeners() {
 }
 
 function removeFromCart(itemId) {
-  // Find the item index
   const itemIndex = cart.findIndex(item => item.id === itemId);
   if (itemIndex === -1) return;
 
-  // Add a fade-out effect before removing
   const itemElement = document.getElementById(`cart_item_${itemId}`);
   itemElement.style.transition = 'opacity 0.3s ease-out';
   itemElement.style.opacity = '0';
 
-  // Remove item
   setTimeout(() => {
-    // Remove from cart array
     cart.splice(itemIndex, 1);
-    // Re-render cart items
+    saveCart();
     renderCartItems();
-    // Update totals
     updateCartTotals();
   }, 300);
 }
@@ -134,13 +133,13 @@ function updateQuantity(itemId, action) {
     cartItem.quantity--;
   }
 
-  // Update the display
+  saveCart(); // Save to localStorage after updating quantity
+
   const quantityElement = document.querySelector(`#cart_item_${itemId} .item-quantity`);
   if (quantityElement) {
     quantityElement.textContent = cartItem.quantity;
   }
 
-  // Update cart totals
   updateCartTotals();
 }
 

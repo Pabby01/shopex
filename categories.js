@@ -1,4 +1,4 @@
-const categoriesList = [
+const categoriesList = JSON.parse(localStorage.getItem('categories')) || [
   {
     name: "electronics",
     image: "./public/images/electronics.jpeg",
@@ -36,6 +36,10 @@ const categoriesList = [
     image: "./public/images/home-appliances.png",
   },
 ];
+
+function saveCategories() {
+  localStorage.setItem('categories', JSON.stringify(categoriesList));
+}
 
 const categoriesContainer = document.getElementById("categories-container");
 const formattedCategories = [...categoriesList, ...categoriesList]
