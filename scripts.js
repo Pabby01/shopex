@@ -1,3 +1,4 @@
+// Categories List
 const deptList = document.getElementById("dept-list");
 const categories = [
   "Fashion",
@@ -25,14 +26,7 @@ const formattedDeps = categories
 
 deptList.innerHTML = formattedDeps;
 
-const generateSlug = (str) =>
-  str
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
-
+// About List
 const formattedAbout = [
   "About shopcart",
   "Careers",
@@ -51,7 +45,14 @@ const formattedAbout = [
   .join("\n");
 document.getElementById("about-list").innerHTML = formattedAbout;
 
-const formattedService = ["Gift Card", "Mobile App", "Shipping & Delivery", "Order Pickup", "Account Signup"]
+// Services List
+const formattedService = [
+  "Gift Card",
+  "Mobile App",
+  "Shipping & Delivery",
+  "Order Pickup",
+  "Account Signup",
+]
   .map(
     (item) =>
       `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
@@ -59,10 +60,52 @@ const formattedService = ["Gift Card", "Mobile App", "Shipping & Delivery", "Ord
   .join("\n");
 document.getElementById("services-list").innerHTML = formattedService;
 
-const formattedHelp = ["Shopcart Help", "Returns", "track orders", "contact us", "feedback", "Security & Fraud"]
+// Help List
+const formattedHelp = [
+  "Shopcart Help",
+  "Returns",
+  "Track Orders",
+  "Contact Us",
+  "Feedback",
+  "Security & Fraud",
+]
   .map(
     (item) =>
       `<li><a href="#" class="hover:border-gray-400 duration-300 border-b border-transparent capitalize w-fit">${item}</a></li>`
   )
   .join("\n");
 document.getElementById("help-list").innerHTML = formattedHelp;
+
+// User Section Update
+const userSection = document.querySelector(".nav-list3"); // Reference to the user section div in the white background
+
+function updateUserSection() {
+  const isLoggedIn = localStorage.getItem("login") === "true";
+  const regUsername = localStorage.getItem("userName") || "Matthew"; // Default name if not set
+
+  if (isLoggedIn) {
+    // Show user avatar and name
+    userSection.innerHTML = `
+      <div class="flex items-center gap-2">
+        <img src="./public/icons/user.svg" alt="User Avatar" width="18" height="18" />
+        <span class="text-green-900 font-semibold">${regUsername}</span>
+      </div>
+    `;
+  } else {
+    // Show login button
+    userSection.innerHTML = `
+      <a href="Login.html" class="flex items-center gap-1">
+        <img src="./public/icons/user.svg" alt="Login Icon" width="18" height="18" />
+        <span>Login</span>
+      </a>
+    `;
+  }
+}
+
+// Redirect to login page
+function redirectToLogin() {
+  window.location.href = "Login.html";
+}
+
+// Initialize user section on page load
+document.addEventListener("DOMContentLoaded", updateUserSection);
