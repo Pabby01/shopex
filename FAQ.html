@@ -1,66 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - ShopeX</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
-
-  <!-- Header -->
-  <header class="bg-green-900 text-white py-6">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold">ShopeX</h1>
-      <p class="text-lg mt-2">Your one-stop shop for all your needs!</p>
-    </div>
-  </header>
-
-  <!-- FAQ Section -->
-  <main class="container mx-auto py-12 px-4 md:px-8 lg:px-16">
-    <section class="bg-white rounded-lg shadow-lg p-8">
-      <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Frequently Asked Questions</h2>
-
-      <div class="space-y-6">
-        <!-- FAQ Item 1 -->
-        <div>
-          <h3 class="text-xl font-semibold text-green-700">1. What is the return policy?</h3>
-          <p class="text-gray-700 mt-2">You can return any product within 30 days of purchase as long as it is in its original condition. Please keep the receipt for a smooth return process.</p>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div>
-          <h3 class="text-xl font-semibold text-green-700">2. How can I track my order?</h3>
-          <p class="text-gray-700 mt-2">Once your order is shipped, you will receive an email with the tracking number. You can use this number on our website under the 'Track Order' section.</p>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div>
-          <h3 class="text-xl font-semibold text-green-700">3. What payment methods do you accept?</h3>
-          <p class="text-gray-700 mt-2">We accept all major credit cards, PayPal, and bank transfers. You can also use store credit or gift cards.</p>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div>
-          <h3 class="text-xl font-semibold text-green-700">4. How do I contact customer service?</h3>
-          <p class="text-gray-700 mt-2">You can reach our customer service team by calling our helpline at <a href="tel:+2349020250260" class="text-green-700 underline">+2349020250260</a> or emailing us at <a href="mailto:adeolalasisi6@gmail.com" class="text-green-600 underline">support@shopex.com</a>. We are available 24/7 to assist you.</p>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div>
-          <h3 class="text-xl font-semibold text-green-700">5. Can I change my order after placing it?</h3>
-          <p class="text-gray-700 mt-2">Yes, you can change your order within 2 hours of placing it. After this period, we begin processing the order and may not be able to accommodate changes.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+            colors: {
+              primary: "#003d28",
+            },
+          },
+        },
+      };
+    </script>
+    <title>FAQ - ShopeX</title>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- HEADER -->
+    <header>
+      <!-- BANNER -->
+      <div class="py-2 md:text-xs text-[9px] bg-primary text-white">
+        <div
+          class="container flex items-center justify-between font-medium px-0"
+        >
+          <div class="flex items-center cursor-pointer sm:gap-2">
+            <img
+              src="./public/icons/phone.svg"
+              alt="Shopping Cart"
+              width="18"
+              height="18"
+            />
+            <p>+2348133961439</p>
+          </div>
+          <p class="flex items-center md:gap-4 gap-1">
+            <span>Get 50% Off on Selected Items</span> <span>|</span>
+            <span>Shop Now</span>
+          </p>
+          <div class="nav-list2">
+            <div>
+              <span id="cart-count">Eng</span>
+              <img
+                src="./public/icons/chevron-down.svg"
+                alt="Shopping Cart"
+                width="20"
+                height="20"
+              />
+            </div>
+            <div class="!hidden sm:!flex">
+              <span id="cart-count">Lan</span>
+              <img
+                src="./public/icons/chevron-down.svg"
+                alt="Shopping Cart"
+                width="20"
+                height="20"
+                class="md:size-[20px] size-[15px]"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-green-900 text-white py-6">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 ShopeX. All rights reserved.</p>
-    </div>
-  </footer>
+      <nav class="px-2 md:px-0">
+        <div class="container" id="nav-container">
+          <div>
+            <a href="/" class="flex items-center gap-2" id="logo">
+              <img
+                src="./public/images/logo.png"
+                alt="ShopEx Logo"
+                width="20"
+                height="20"
+              />
+              <span class="font-bold text-lg">ShopEx</span>
+            </a>
+          </div>
+          <ul class="nav-list text-sm">
+            <li><a href="./categories.html">Categories</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="#cart">Deals</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+          <div class="nav-list2 text-sm">
+            <div class="nav-list3 text-sm">
+              <img
+                src="./public/icons/user.svg"
+                alt="Shopping Cart"
+                width="18"
+                height="18"
+              />
+              <a href="./login.html"><span id="cart-count">Login</span></a>
+            </div>
+            <a href="./cart.html">
+              <img
+                src="./public/icons/cart.svg"
+                alt="Shopping Cart"
+                width="18"
+                height="18"
+              />
+              <span id="cart-count">Cart</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-</body>
+    <!-- FAQ Section -->
+    <main class="container mx-auto px-4 py-10">
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">General Questions</h2>
+        <div class="space-y-4">
+          <!-- Question 1 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">What is ShopEx?</h3>
+            <p class="text-gray-700 mt-2">
+              ShopEx is an e-commerce platform where you can find high-quality
+              products at competitive prices. We strive to provide a seamless
+              and enjoyable shopping experience for all our customers.
+            </p>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+              How can I create an account?
+            </h3>
+            <p class="text-gray-700 mt-2">
+              To create an account, click on the "Sign Up" button at the top of
+              the page, fill in your details, and follow the instructions. It
+              only takes a few minutes to get started.
+            </p>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+              What payment methods do you accept?
+            </h3>
+            <p class="text-gray-700 mt-2">
+              We accept a variety of payment methods, including credit/debit
+              cards, PayPal, and other secure payment gateways. You can view all
+              available options at checkout.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          Orders and Shipping
+        </h2>
+        <div class="space-y-4">
+          <!-- Question 1 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+              How do I track my order?
+            </h3>
+            <p class="text-gray-700 mt-2">
+              Once your order has been shipped, you will receive an email with a
+              tracking number. You can use this number to track your package on
+              our website or the courier's website.
+            </p>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+              What is your return policy?
+            </h3>
+            <p class="text-gray-700 mt-2">
+              We offer a hassle-free return policy within 30 days of purchase.
+              The product must be in its original condition. For more details,
+              visit our Returns and Refunds page.
+            </p>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+              How long does shipping take?
+            </h3>
+            <p class="text-gray-700 mt-2">
+              Shipping times vary based on your location and the shipping method
+              selected. Standard shipping usually takes 5-7 business days, while
+              expedited shipping takes 2-3 business days.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-16">
+      <div class="space-y-5">
+        <div class="container flex md:flex-row flex-col justify-between gap-8">
+          <div class="space-y-7">
+            <div>
+              <a href="/" class="flex items-center gap-2" id="logo">
+                <img
+                  src="./public/images/logo.png"
+                  alt="ShopEx Logo"
+                  width="34"
+                  height="34"
+                />
+                <span class="font-bold text-2xl">ShopEx</span>
+              </a>
+            </div>
+
+            <p class="text-sm text-gray-500 max-w-md">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+
+            <div class="space-y-3">
+              <p class="md:text-lg font-semibold">Accepted Payments</p>
+              <div class="flex items-center gap-2 flex-wrap max-w-lg">
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/stripe.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/amazon.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/apple-pay.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/google-pay.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/mastercard.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/paypal.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/visa.png" alt="" />
+                </div>
+                <div
+                  class="border rounded-md flex items-center justify-center px-4 min-h-10"
+                >
+                  <img src="./public/images/payments/klarna.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <a href="FAQ.html"
+              ><button
+                class="bg-primary text-white font-medium px-4 py-2 rounded-full"
+              >
+                FAQs
+              </button></a
+            >
+          </div>
+
+          <div class="sm:flex flex-grow grid grid-cols-2 justify-between gap-4">
+            <div class="space-y-4">
+              <p class="font-semibold text-lg">Department</p>
+              <ul class="text-sm space-y-2" id="dept-list"></ul>
+            </div>
+            <div class="space-y-4">
+              <p class="font-semibold text-lg">About</p>
+              <ul class="text-sm space-y-2" id="about-list"></ul>
+            </div>
+            <div class="space-y-4">
+              <p class="font-semibold text-lg">Services</p>
+              <ul class="text-sm space-y-2" id="services-list"></ul>
+            </div>
+            <div class="space-y-4">
+              <p class="font-semibold text-lg">Help</p>
+              <ul class="text-sm space-y-2" id="help-list"></ul>
+            </div>
+          </div>
+        </div>
+        <p class="text-center font-medium md:text-sm text-xs">
+          &copy; 2025 ShopEx. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

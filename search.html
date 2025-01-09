@@ -1,99 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="search.js"></script>
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          container: {
-            center: true,
-            padding: "1rem",
-          },
-          colors: {
-            primary: "#003d28",
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+            colors: {
+              primary: "#003d28",
+            },
           },
         },
-      },
-    };
-  </script>
-  <style>
-    #cart_items > li:last-child {
-      border-bottom: 1px solid #003d28;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <!-- BANNER -->
-    <div class="py-2 text-xs bg-primary text-white">
-      <div class="container flex items-center justify-between font-medium px-0">
-        <div class="flex items-center cursor-pointer gap-2">
-          <img src="/public/icons/phone.svg" alt="Shopping Cart" width="18" height="18" />
-          <p>+2348133961439</p>
-        </div>
-        <p class="flex items-center gap-4">
-          <span>Get 50% Off on Selected Items</span> <span>|</span> <span>Shop Now</span>
-        </p>
-        <div class="nav-list2">
-          <div>
-            <span id="cart-count">Eng</span>
-            <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+      };
+    </script>
+    <style>
+      #cart_items > li:last-child {
+        border-bottom: 1px solid #003d28;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- BANNER -->
+      <div class="py-2 text-xs bg-primary text-white">
+        <div
+          class="container flex items-center justify-between font-medium px-0"
+        >
+          <div class="flex items-center cursor-pointer gap-2">
+            <img
+              src="/public/icons/phone.svg"
+              alt="Shopping Cart"
+              width="18"
+              height="18"
+            />
+            <p>+2348133961439</p>
           </div>
-          <div>
-            <span id="cart-count">Lan</span>
-            <img src="/public/icons/chevron-down.svg" alt="Shopping Cart" width="20" height="20" />
+          <p class="flex items-center gap-4">
+            <span>Get 50% Off on Selected Items</span> <span>|</span>
+            <span>Shop Now</span>
+          </p>
+          <div class="nav-list2">
+            <div>
+              <span id="cart-count">Eng</span>
+              <img
+                src="/public/icons/chevron-down.svg"
+                alt="Shopping Cart"
+                width="20"
+                height="20"
+              />
+            </div>
+            <div>
+              <span id="cart-count">Lan</span>
+              <img
+                src="/public/icons/chevron-down.svg"
+                alt="Shopping Cart"
+                width="20"
+                height="20"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  
-    <nav>
-      <div class="container" id="nav-container">
-        <a href="/" class="flex items-center gap-2" id="logo">
-          <img src="/public/images/logo.png" alt="ShopEx Logo" width="20" height="20" />
-          <span class="font-bold text-lg">ShopEx</span>
-        </a>
-        <ul class="nav-list text-sm">
-          <li><a href="#home">Categories</a></li>
-          <li><a href="#products">What's new</a></li>
-          <li><a href="#cart">Deals</a></li>
-          <li><a href="#cart">About</a></li>
-        </ul>
-        <div class="nav-list2 text-sm">
-          <div>
-            <img src="/public/icons/user.svg" alt="Shopping Cart" width="18" height="18" />
-            <span id="cart-count">Account</span>
-          </div>
-          <a href="./cart">
-            <img src="/public/icons/cart.svg" alt="Shopping Cart" width="18" height="18" />
-            <span id="cart-count">Cart</span>
+
+      <nav>
+        <div class="container" id="nav-container">
+          <a href="/" class="flex items-center gap-2" id="logo">
+            <img
+              src="/public/images/logo.png"
+              alt="ShopEx Logo"
+              width="20"
+              height="20"
+            />
+            <span class="font-bold text-lg">ShopEx</span>
           </a>
+          <ul class="nav-list text-sm">
+            <li><a href="#home">Categories</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="#cart">Deals</a></li>
+            <li><a href="#cart">About</a></li>
+          </ul>
+          <div class="nav-list2 text-sm">
+            <div>
+              <img
+                src="/public/icons/user.svg"
+                alt="Shopping Cart"
+                width="18"
+                height="18"
+              />
+              <span id="cart-count">Account</span>
+            </div>
+            <a href="./cart">
+              <img
+                src="/public/icons/cart.svg"
+                alt="Shopping Cart"
+                width="18"
+                height="18"
+              />
+              <span id="cart-count">Cart</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="container py-10">
-    <form id="search_form" action="" class="flex max-w-2xl mx-auto">
-      <div class="px-2 grid place-content-center border-primary border border-r-0 rounded-r-none rounded-md">
-        <img src="./public/icons/search.svg" class="w-5 h-5"  alt="Seach Icon">
-      </div>
-      <input type="text" placeholder="Search products and categories here..."
-      class="py-2  pl-2 pr-5 rounded-md border border-primary ring-0 outline-none placeholder-gray-500 text-primary border-l-0 rounded-l-none w-full">
-      <button type="submit" class="bg-primary text-white ml-2 px-5 rounded-md">Search</button>
-    </form>
+    <main class="container py-10">
+      <form id="search_form" action="" class="flex max-w-2xl mx-auto">
+        <div
+          class="px-2 grid place-content-center border-primary border border-r-0 rounded-r-none rounded-md"
+        >
+          <img
+            src="./public/icons/search.svg"
+            class="w-5 h-5"
+            alt="Seach Icon"
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="Search products and categories here..."
+          class="py-2 pl-2 pr-5 rounded-md border border-primary ring-0 outline-none placeholder-gray-500 text-primary border-l-0 rounded-l-none w-full"
+        />
+        <button
+          type="submit"
+          class="bg-primary text-white ml-2 px-5 rounded-md"
+        >
+          Search
+        </button>
+      </form>
 
-    <ul id="results" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+      <ul
+        id="results"
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10"
+      ></ul>
+    </main>
 
-    </ul>
-  </main>
-
-.  .
-</body>
+    . .
+  </body>
 </html>
